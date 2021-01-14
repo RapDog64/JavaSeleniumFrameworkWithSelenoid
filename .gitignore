@@ -1,0 +1,8 @@
+.allure/
+.idea/
+target/
+*.iml
+*.log
+tests-output/
+screenshots/
+*.png

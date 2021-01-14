@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke suite" parallel="classes" thread-count="2" verbose="2">
+
+    <listeners>
+        <listener class-name="com.weavesocks.utilities.listeners.AllureListener"/>
+        <listener class-name="com.weavesocks.utilities.listeners.RetryTestListener"/>
+    </listeners>
+    <test name="Log in tests with Chrome 87.0">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="87.0"/>
+
+        <packages>
+            <package name="com.weavesockstest"/>
+        </packages>
+    </test>
+
+    <test name="Log in with Firefox 83.0">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="83.0"/>
+
+        <packages>
+            <package name="com.weavesockstest"/>
+        </packages>
+    </test>
+
+</suite>
